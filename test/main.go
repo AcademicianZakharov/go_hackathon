@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"sort"
-	//"bufio"
 )
 
 func main() {
@@ -32,20 +31,7 @@ func main() {
 	sort.SliceStable(citiesSlice, func(i, j int) bool {
 		return citiesSlice[i].distance > citiesSlice[j].distance
 	})
-	fmt.Printf("Sort by distance: %v", citiesSlice)
-	// outputNumberOfRequests(citiesSlice)
-	//put into other files
-	// file, err := os.OpenFile("test.txt", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
- 
-	// datawriter := bufio.NewWriter(file)
- 
-	// for _, data := range sampledata {
-	// 	_, _ = datawriter.WriteString(data + "\n")
-	// }
- 
-	// datawriter.Flush()
-	// file.Close()
-	
+	fmt.Printf("slice of cities: %v", citiesSlice)
 }
 
 
