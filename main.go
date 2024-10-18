@@ -35,8 +35,8 @@ func main() {
 	// 	fmt.Println(i)
 	// }
 
-	var mystr = []rune("text")
+	var mystr = "dziesięć"
 	var indexed = mystr[0]
-	fmt.Println("%v, %T", indexed, mystr)
+	fmt.Println("%v, %T", indexed, indexed)
 
 }
