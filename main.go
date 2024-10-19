@@ -1,9 +1,7 @@
 package main
 
 import (
-	"fmt"
 	"sort"
-	//"bufio"
 )
 
 func main() {
@@ -11,46 +9,31 @@ func main() {
 
 	var allCities = getAllCities(allIPs)
 
+	// get a slcie of all unique cities
 	var citiesSlice []city
 	for _, c := range allCities {
 		citiesSlice = append(citiesSlice, c)
 	}
-	
-	//sort
+
+	// sort by number of requests
 	sort.SliceStable(citiesSlice, func(i, j int) bool {
 		return citiesSlice[i].numResquests > citiesSlice[j].numResquests
 	})
+	outputNumberOfRequests(citiesSlice)
 
-	fmt.Printf("slice of cities: %v", citiesSlice)
-	fmt.Println("---------------------------------------------------------------")
-
-
-	for i:=0; i<len(citiesSlice); i++ {
+	// calculate the distance
+	for i := 0; i < len(citiesSlice); i++ {
 		citiesSlice[i].distance = citiesSlice[i].calculateDistanceFromVictoria()
 	}
-	//for distnace, need to calculate
+
+	// sort by distance
 	sort.SliceStable(citiesSlice, func(i, j int) bool {
 		return citiesSlice[i].distance > citiesSlice[j].distance
 	})
-	fmt.Printf("Sort by distance: %v", citiesSlice)
-	// outputNumberOfRequests(citiesSlice)
-	//put into other files
-	// file, err := os.OpenFile("test.txt", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
- 
-	// datawriter := bufio.NewWriter(file)
- 
-	// for _, data := range sampledata {
-	// 	_, _ = datawriter.WriteString(data + "\n")
-	// }
- 
-	// datawriter.Flush()
-	// file.Close()
-	
+	outputFurthestCity(citiesSlice[0])
 }
 
-
-
-func getAllCities(allIPs []string) map[string]city{
+func getAllCities(allIPs []string) map[string]city {
 
 	var allCities = make(map[string]city)
 
@@ -67,7 +50,7 @@ func getAllCities(allIPs []string) map[string]city{
 		}
 
 		c, exists := allCities[cityName]
-		
+
 		// update the map of cities
 		if exists {
 			newRequestNum := c.numResquests + 1
@@ -79,6 +62,5 @@ func getAllCities(allIPs []string) map[string]city{
 		}
 	}
 
-	return allCities;
+	return allCities
 }
-

@@ -1,13 +1,10 @@
 package main
 
-//"fmt"
-//"errors"
-//"strings"
 import "math"
 
 type city struct {
 	Name         string
-	country 	 string
+	country      string
 	numResquests int
 	distance     float64
 	longitude    float64

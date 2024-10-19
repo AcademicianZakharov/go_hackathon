@@ -1,0 +1,11 @@
+Top 10 cities outside of Canada where the requests are from: 
+Moses Lake  |  4 requests
+Council Bluffs  |  2 requests
+Redmond  |  1 requests
+Mountain View  |  1 requests
+Des Moines  |  1 requests
+Oklahoma City  |  1 requests
+
+ ------------------------------------
+
+Of the top 10 cities, the city that is the furthest away from Victoria, BC is: Oklahoma City

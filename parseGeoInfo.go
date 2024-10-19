@@ -5,8 +5,9 @@ import (
 	"log"
 	"net"
 	"os"
-	"strings"
 	"strconv"
+	"strings"
+
 	"github.com/ipinfo/go/v2/ipinfo"
 )
 
@@ -14,7 +15,7 @@ func readIPs() []string {
 	var allIP = []string{}
 
 	// read the log
-	file, err := os.Open("ca-test-access.log")
+	file, err := os.Open("test-short.log")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -64,7 +65,6 @@ func getLocation(ip string) (latitude float64, longitude float64) {
 
 	latitudeStr := strings.Split(location, ",")[0]
 	longitudeStr := strings.Split(location, ",")[1]
-	
 
 	value1, err1 := strconv.ParseFloat(latitudeStr, 64)
 	if err1 != nil {
@@ -77,7 +77,6 @@ func getLocation(ip string) (latitude float64, longitude float64) {
 		// do something sensible
 	}
 	longitude = float64(value2)
-
 
 	return
 }
