@@ -15,7 +15,7 @@ func readIPs() []string {
 	var allIP = []string{}
 
 	// read the log
-	file, err := os.Open("test-short.log")
+	file, err := os.Open("../testFiles/test-long.log")
 	if err != nil {
 		log.Fatal(err)
 	}

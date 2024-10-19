@@ -1,0 +1,12 @@
+Top 10 cities outside of Canada where the requests are from: 
+Mountain View  |  139 requests
+Moses Lake  |  128 requests
+Council Bluffs  |  99 requests
+Redmond  |  48 requests
+Moncks Corner  |  46 requests
+Des Moines  |  44 requests
+Oklahoma City  |  31 requests
+
+ ------------------------------------
+
+Of the top 10 cities, the city that is the furthest away from Victoria, BC is: Moncks Corner

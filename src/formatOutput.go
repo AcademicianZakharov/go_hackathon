@@ -6,7 +6,7 @@ import (
 	"strconv"
 )
 
-var resultFile string = "result.txt"
+var resultFile string = "../output/result.txt"
 
 func outputNumberOfRequests(citiesSlice []city) {
 	f, err := os.Create(resultFile)
