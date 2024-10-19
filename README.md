@@ -6,3 +6,13 @@ Given the Apache HTTP access log, the program will scan through the log and: <br
   - find the top 10 cities outside of Canada where the requests to the NFIS servers are being made from; <br>
   - find the number of HTTP requests for those cities;<br>
   - find the city that is the furthest away from Victoria, BC, of the top 10 cities
+
+
+## How to run the program
+Navigate to the ``src`` directory and execute the following command:
+
+```
+go run .  
+```
+
+A report will be then generated in the ``output`` folder.
